@@ -1,34 +1,180 @@
 # Assignment 01 — Persona-Based AI Chatbot
 
-## Setup Instructions
+## Project Overview
 
-1. **Clone the repository** or download the source code.
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-3. **Set up Environment Variables:**
-   Copy the `.env.example` file to `.env.local` and add your Gemini API Key.
-   ```bash
-   cp .env.example .env.local
-   # Edit .env.local and add VITE_GEMINI_API_KEY=your_api_key_here
-   ```
-   *(Note: The key uses `VITE_GEMINI_API_KEY` or `GEMINI_API_KEY` depending on the environment)*
+This project is a Persona-Based AI Chatbot built using modern web technologies and powered by Gemini 2.5 Flash API. The chatbot allows users to interact with three different Scaler personas, each having their own unique communication style, teaching approach, and personality.
 
-4. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-5. **Open** [http://localhost:3000](http://localhost:3000) in your browser.
+The goal of this project is to create a realistic mentor-style chatbot experience where users can switch between personas and receive responses that match the selected mentor’s behavior and expertise.
 
-## Features
-- Switch between 3 Scaler Personas: Anshuman Singh, Abhimanyu Saxena, and Kshitij Mishra.
-- Live streaming/API generation using Gemini 2.5 Flash.
-- Suggestion chips for quick starting.
-- Persona-specific system prompts with Chain-of-Thought reasoning.
-- Dark mode, mobile-responsive UI.
+---
 
-## File Structure
-- `src/lib/personas.ts`: Contains the definitions and system prompts for the personas.
-- `src/app/api/chat/route.ts`: Next.js App Router API endpoint that securely communicates with the Gemini API.
-- `src/app/page.tsx`: The main frontend interface.
+## Installation Guide
+
+### Step 1: Get the Source Code
+
+Clone the repository or download the project files to your local system.
+
+```bash
+git clone <your-repository-link>
+```
+
+Or simply download the ZIP file and extract it.
+
+---
+
+### Step 2: Install Required Packages
+
+Open the project folder in terminal and run:
+
+```bash
+npm install
+```
+
+This will install all required dependencies.
+
+---
+
+### Step 3: Configure Environment Variables
+
+Create a new file named `.env.local` by copying `.env.example`.
+
+```bash
+cp .env.example .env.local
+```
+
+Now open `.env.local` and add your Gemini API Key:
+
+```env
+VITE_GEMINI_API_KEY=your_api_key_here
+```
+
+Some environments may use:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+Make sure your API key is valid for proper chatbot functionality.
+
+---
+
+### Step 4: Start the Development Server
+
+Run the following command:
+
+```bash
+npm run dev
+```
+
+This will start the local development server.
+
+---
+
+### Step 5: Open in Browser
+
+Visit the following URL in your browser:
+
+```text
+http://localhost:3000
+```
+
+Your chatbot application should now be running successfully.
+
+---
+
+## Main Features
+
+### Multiple Persona Switching
+
+Users can switch between three Scaler mentors:
+
+* Anshuman Singh
+* Abhimanyu Saxena
+* Kshitij Mishra
+
+Each persona responds differently based on their unique teaching and mentoring style.
+
+---
+
+### Gemini 2.5 Flash Integration
+
+The chatbot uses Gemini 2.5 Flash API for:
+
+* Fast responses
+* Live generation
+* Smart conversational flow
+* Better AI interaction quality
+
+---
+
+### Suggestion Chips
+
+Quick-start suggestion chips help users begin conversations faster without typing full questions manually.
+
+---
+
+### Persona-Specific Prompting
+
+Each mentor uses a dedicated system prompt with personality-based behavior and structured reasoning for more realistic answers.
+
+---
+
+### Responsive UI + Dark Mode
+
+The application supports:
+
+* Mobile responsiveness
+* Clean UI design
+* Dark mode support
+* Smooth chat experience across devices
+
+---
+
+## Project Folder Structure
+
+### `src/lib/personas.ts`
+
+This file contains:
+
+* Persona definitions
+* Mentor information
+* System prompts
+* Behavior instructions for each chatbot personality
+
+---
+
+### `src/app/api/chat/route.ts`
+
+This is the backend API route responsible for:
+
+* Secure Gemini API communication
+* Handling user messages
+* Sending prompts to Gemini
+* Returning AI-generated responses
+
+---
+
+### `src/app/page.tsx`
+
+This is the main frontend page that includes:
+
+* Chat interface
+* Persona switching UI
+* Message display
+* Input field
+* Suggestion chips
+* Full chatbot interaction experience
+
+---
+
+## Final Objective
+
+The purpose of this assignment is to demonstrate:
+
+* API integration skills
+* Frontend development ability
+* Prompt engineering knowledge
+* Real-world chatbot system design
+* Professional UI/UX implementation
+
+This project combines both technical implementation and user experience design into one complete assignment.
